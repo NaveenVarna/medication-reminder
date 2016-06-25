@@ -4,11 +4,11 @@
 
 #banner {
     border-bottom: none;
-    margin-top: -20px;
+	border: solid black 3px;
 }
 
 #banner h1 {
-    font-size: 60px;
+    font-size: 40px;
     line-height: 1;
     letter-spacing: -1px;
 }
