@@ -1,0 +1,28 @@
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css"> 
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="main.controller.js"></script>
+
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+      <h1>{{currentTime}}</h1>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 text-center">
+        <div ng-repeat="m in meds">
+            {{m.time}} {{m.name}} {{m.dosage}}
+        </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+      <p>&#169 2016 Mavencare&#8482, made with <span class="glyphicon glyphicon-heart heart-red"></span> for better healthcare.</p>
+  </div>
+</footer>
