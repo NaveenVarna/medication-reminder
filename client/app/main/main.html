@@ -6,21 +6,60 @@
 <script type="text/javascript" src="main.controller.js"></script>
 
 <div ng-include="'components/navbar/navbar.html'"></div>
-
+	    
 <header class="hero-unit" id="banner">
+<div class="container-logo">
+<img src="images/logo.png" alt="Mavencare logo" style="width:50px;height:50px;" float="left">
+</div>
   <div class="container">
-      <h1>{{currentTime}}</h1>
+	  <p id="time">
+		<script>getTime();</script>
+	  </p>
+
+	  <p id="date">
+		<script>getDate();</script>
+	  </p>
   </div>
 </header>
-<div class="container">
+
+<br>
+
+<div class="month">
+  <ul>
+    <li class="previous">&#8592</li>
+    <li class="next">&#8594</li>
+    <li style="text-align:center">JUNE<p>2016</p>
+    </li>
+  </ul>
+</div>
+
+<ul class="days">
+  <li>Sunday</li> <li>Monday</li> <li>Tuesday</li> <li>Wednesday</li> <li>Thursday</li>
+  <li>Friday</li> <li>Saturday</li> 
+</ul>
+
+<ul class="numbers">
+  <li> </li> <li> </li> <li> </li> <li>1</li> <li>2</li> <li>3</li> <li>4</li> <li>5</li>
+  <li>6</li> <li>7</li> <li>8</li> <li>9</li> <li>10</li>
+  <li>11</li> <li>12</li> <li>13</li> <li>14</li> <li>15</li>
+  <li>16</li> <li>17</li> <li>18</li> <li>19</li> <li>20</li>
+  <li>21</li> <li>22</li> <li>23</li> <li>24</li> <li>25</li> <li>26</li>
+  <li><p class="selected">27</p></li> <li>28</li> <li>29</li> <li>30</li>
+</ul>
+
+<div class="container-rem">
   <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 text-center">
-        <div ng-repeat="m in meds">
-            {{m.time}} {{m.name}} {{m.dosage}}
+    <div class="col-sm-6 col-lg-offset-3 text-center">
+        <div ng-repeat="m in meds" class="reminder-text">
+            {{m.name}} <br>
+			{{m.time}} <br> 
+			{{m.dosage}} <br>
+			<button type = "button" class="btn btn-primary btn-md" onclick = "complete()">Complete</button>			
         </div>
     </div>
   </div>
 </div>
+
 <footer class="footer">
   <div class="container">
       <p>&#169 2016 Mavencare&#8482, made with <span class="glyphicon glyphicon-heart heart-red"></span> for better healthcare.</p>
